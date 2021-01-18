@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+ html, body {
+	 overflow: hidden;
+}
+ .background {
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 overflow: hidden;
+	 will-change: transform;
+	 backface-visibility: hidden;
+	 height: 130vh;
+	 position: fixed;
+	 width: 100%;
+	 transform: translateY(30vh);
+	 /* transition: all 1.75s cubic-bezier(0.22, 0.44, 0, 1); */
+   transition: all 1.5s cubic-bezier(0.3, 0.2, 0, 1);
+}
+ .background:before {
+	 content: "";
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background-color: rgba(0, 0, 0, .3);
+}
+ .background:first-child {
+	 background-image: url('img/YokoInoue.jpg');
+	 transform: translateY(-15vh);
+}
+ .background:first-child .content-wrapper {
+	 transform: translateY(15vh);
+}
+ .background:nth-child(2) {
+	 background-image: url('img/paperbg3.jpeg');
+}
+ .background:nth-child(3) {
+	 background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
+}
+/* Set stacking context of slides */
+ .background:nth-child(1) {
+	 z-index: 3;
+}
+ .background:nth-child(2) {
+	 z-index: 2;
+}
+ .background:nth-child(3) {
+	 z-index: 1;
+}
+ .content-wrapper {
+	 height: 100vh;
+	 display: flex;
+	 justify-content: center;
+	 text-align: center;
+	 flex-flow: column nowrap;
+	 color: #fff;
+	 font-family: Montserrat;
+	 text-transform: uppercase;
+	 transform: translateY(40vh);
+	 will-change: transform;
+	 backface-visibility: hidden;
+	 transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+ .content-title {
+	 font-size: 17.5vh;
+	 line-height: 1;
+   text-align: left;
+   margin-left: 5vh;
+   margin-top: -20vh;
+}
+
+.content-subtitle {
+  font-size: 5vh;
+  text-align: left;
+  margin-left: 7.5vh;
+}
+
+ .background.up-scroll {
+	 transform: translate3d(0, -15vh, 0);
+}
+ .background.up-scroll .content-wrapper {
+	 transform: translateY(15vh);
+}
+ .background.up-scroll + .background {
+	 transform: translate3d(0, 30vh, 0);
+   /* transform: translate3d(30vw, 0, 0); */
+}
+ .background.up-scroll + .background .content-wrapper {
+	 transform: translateY(30vh);
+}
+ .background.down-scroll {
+   transform: translate3d(0, -130vh, 0);
+	 /* transform: translate3d(-100vw, 0, 0); */
+}
+ .background.down-scroll .content-wrapper {
+	 transform: translateY(40vh);
+}
+ .background.down-scroll + .background:not(.down-scroll) {
+	 transform: translate3d(0, -15vh, 0);
+}
+ .background.down-scroll + .background:not(.down-scroll) .content-wrapper {
+	 transform: translateY(15vh);
+}
+
+#section01 a {
+  text-align: center;
+  position: relative;
+  top: 20vh;
+  color: rgba(255, 255, 255, 1.0);
+  text-decoration: none;
+}
+#section01 a p {
+  display: block;
+  text-align: center;
+}
+#section01 a span {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	-webkit-transform: translate(-50%, 0%) rotate(45deg);
+	-moz-transform: translate(-50%, 0%) rotate(45deg);
+	transform: translate(-50%, 0%) rotate(45deg);
+  box-sizing: border-box;
+}
+
+#section01 a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#section01 a span:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* #section01 span {
+  position: relative;
+  left: 50%;
+  top: 20vh;
+  width: 10vh;
+  height: 10vh;
+  border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	-webkit-transform: translate(-50%, 0%) rotate(45deg);
+	-moz-transform: translate(-50%, 0%) rotate(45deg);
+	transform: translate(-50%, 0%) rotate(45deg);
+  box-sizing: border-box;
+}
+
+.scroll-note {
+  text-align: left;
+  margin: 0 auto;
+  position: relative;
+  top: 23vh;
+} */
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5vw;
+  padding: 10vh;
+  align-items: center;
+  /* justify-content: flex-start; */
+  text-align: left;
+}
+
+.writing {
+  text-align: left;
+}
+
+.thumbnails {
+  /* background-color: blue; */
+
+}
+
+.section-title {
+  font-size: 7.5vh;
+  text-decoration: overline;
+}
+
+.writing p {
+  text-transform: none;
+  font-size: 2.5vh;
+  line-height: 1.5;
+}
+
+.fancybox img {
+  width: 14.625vh;
+  height: 10vh;
+
+  /* margin-top: 2vh;
+  margin-bottom: 2vh; */
+}
+
+.thumbnails p {
+  font-size: 2vh;
+  padding: 2vh;
+  text-align: left;
+}

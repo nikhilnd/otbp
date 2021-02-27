@@ -18,15 +18,15 @@ body {
 	font-family:sans-serif;
 }
 
-	body > div {
-		position:fixed;
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-		background:transparent center no-repeat;
-		background-size:cover;
-	}
+body > div {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:transparent center no-repeat;
+	background-size:cover;
+}
 
 .background::before {
 	 content: "";
@@ -40,11 +40,11 @@ body {
 	 background-color: rgba(0, 0, 0, .3);
  }
 
-body > div:nth-child(1) {
+.background:nth-child(1) {
 	background-image:url('img/YokoInoue.jpg');
 }
 
-body > div:nth-child(2) {
+.background:nth-child(2) {
 	overflow:hidden;
   background-image:url('img/paperbg4.jpg');
 }
